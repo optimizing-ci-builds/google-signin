@@ -6,8 +6,9 @@ on:
 
 jobs:
   support:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
+      - run: touch starting_support_dessantsupport-requests@v2_11
       - uses: dessant/support-requests@v2
         with:
           github-token: ${{ github.token }}
@@ -20,3 +21,4 @@ jobs:
             Please create a new issue with this and we'll be happy to review it! If you're hitting a hard wall, you may consider [paid assistance](https://github.com/react-native-google-signin/google-signin/pull/861).
           close-issue: true
           lock-issue: false
+
